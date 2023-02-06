@@ -11,6 +11,9 @@ API Flask qui prend une image en entrée pour fournir une segmentation d’image
 pip install -r requirements.txt
 ```
 
+## Tester l'application 
+https://fvt-app-flask.herokuapp.com/
+
 ## Lancer l'API
 
 ```sh
