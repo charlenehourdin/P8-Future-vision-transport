@@ -1,0 +1,32 @@
+{
+    "theme_color": "#FDF465",
+    "background_color": "#DF2372",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "name": "Future Vision Transport",
+    "short_name": "FVT",
+    "description": "API Flask qui prend une image en entr\u00e9e pour fournir une segmentation d\u2019image en sortie.",
+    "icons": [{
+            "src": "icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

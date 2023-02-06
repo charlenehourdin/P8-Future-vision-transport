@@ -1,0 +1,13 @@
+Keras_Preprocessing
+Flask
+gunicorn
+matplotlib
+numpy
+# Fix : ImportError: libGL.so
+# opencv-python
+opencv-python-headless
+python-dotenv
+six
+# Fix : Heroku : Slug size too large
+# tensorflow
+tensorflow-cpu

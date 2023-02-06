@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+{% block body %}
+<nav class="breadcrumb border">
+  <ol class="breadcrumb-list space-x-1 md:space-x-3">
+    <li class="breadcrumb-item">
+      <a href="/" class="breadcrumb-link">
+        <svg class="breadcrumb-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
+          </path>
+        </svg> 
+        <span class="breadcrumb-text">Accueil</span>
+      </a>
+    </li>
+    <li class="breadcrumb-item">
+      <div class="breadcrumb-item-inner">
+        <svg class="breadcrumb-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+            clip-rule="evenodd"></path>
+        </svg>
+        <span class="breadcrumb-text">API</span>
+      </div>
+    </li>
+  </ol>
+</nav>
+<main class="main-content">
+  <div class="header-api">
+    <h1 class="title-api">Résultat de la segmentation</h1>
+  </div>
+  <div class="container-api">
+    <div class="grid">
+      <div class="card rounded-lg">
+        <h2 class="card-title">{{image_data}}</h2>
+        <img class="card-img border rounded-lg" alt="Original" src='{{ url_for("static", filename="datasets/images/"+image_data) }}' height="256" width="512" />
+      </div>
+      <div class="card rounded-lg">
+        <h2 class="card-title">Masque réel</h2>
+        <img class="card-img border rounded-lg " alt="Ground Truth" src='{{ url_for("static", filename="outputs/gt.png") }}' height="256" width="512" />
+      </div>
+      <div class="card rounded-lg">
+        <h2 class="card-title">Prédiction</h2>
+        <img class="card-img border rounded-lg" alt="Prédiction" src='{{ url_for("static", filename="outputs/prediction.png") }}' height="256" width="512" />
+      </div>
+    </div>
+  </div>
+  <div class="container-description">
+    <div class="container-card-description">
+      <div
+        class="card rounded-lg border">
+        <table class="container-table">
+          <thead class="border-b">
+            <tr>
+              <th colspan="2" scope="col" class="table-title">Catégorie</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!--<tr class="border-b ciel">-->
+            <tr class="border-b bg-[#008fdd] border">
+              <td class="text-gray-900 title-tr"> Ciel </td>
+              <td class="tr-description"> Ciel </td>
+            </tr>
+            <tr class="border-b bg-[#f3e400] border">
+              <td class="text-gray-900 title-tr"> Construction </td>
+              <td class="tr-description"> batiment, mur, cloture, garde-corp, pont, tunnel</td>
+            </tr>
+            <tr class="border-b bg-[#1300a8] border">
+              <td class="text-white title-tr"> Humain </td>
+              <td class="tr-description"> personne, cavalier </td>
+            </tr>
+            <tr class="border-b bg-[#00a03a] border">
+              <td class="text-gray-900 title-tr"> Nature </td>
+             <td class="tr-description"> végétation, terrain </td>
+            </tr>
+            <tr class="border-b bg-[#00ec00] border">
+              <td class="text-gray-900 title-tr"> Objet </td>
+              <td class="tr-description"> poteau, groupe de poteaux, panneau de signalisation, feu de signalisation </td>
+            </tr>
+            <tr class="border-b bg-[#fa0000] border">
+              <td class="text-gray-900 title-tr"> Sol </td>
+              <td class="tr-description"> route, trottoir, stationnement, voie ferré</td>
+            </tr>
+            <tr class="border-b bg-[#000000] border">
+              <td class="text-white title-tr"> Véhicule </td>
+              <td class="tr-description"> voiture, camion, bus, moto, train, caravane, remorque </td>
+            </tr>
+            <tr class="border-b bg-[#cccccc] border">
+              <td class="text-black-900 title-tr"> Néant </td>
+              <td class="tr-description"> sol, dynamique, statique </td>
+            </tr>
+          
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+{%endblock%}
