@@ -6,16 +6,6 @@ API Flask qui prend une image en entrée pour fournir une segmentation d’image
 
 Pour plus de détails techniques, vous pouvez consulter le code du projet sur [ce dépôt](https://github.com/Abdess/Future-Vision-Transport).
 
-## Screenshots
-
-### Accueil
-
-![Accueil](screenshots/FVT_Home.png)
-
-### Prédiction
-
-![Prédiction](screenshots/FVT_Prediction.png)
-
 ## Installation
 
 ```sh
