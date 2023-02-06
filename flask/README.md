@@ -14,8 +14,6 @@ pip install -r requirements.txt
 
 ## Lancer l'API
 
-Renommez `.env.example` en `.env` puis tapez dans un terminal :
-
 ```sh
 python run.py
 ```
